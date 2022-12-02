@@ -7,9 +7,15 @@
 </head>
 <body>
 
+  <!-- the data-keys are connected to the audio tags? Not sure what Data keys do -->
 
   <div class="keys">
+    <!-- the data key is assigned the value of the keyCode, but keyCode is deprciated, so we may need to look into another option -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode#:~:text=Deprecated%3A%20This%20feature%20is%20no,be%20kept%20for%20compatibility%20purposes. -->
+    
+    <!-- I think we should just change the key to the key property -->
     <div data-key="65" class="key">
+      <!-- never heard of the kbd element? -->
       <kbd>A</kbd>
       <span class="sound">clap</span>
     </div>
@@ -57,7 +63,7 @@
   <audio data-key="75" src="sounds/tom.wav"></audio>
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
-<script>
+<script src="app.js">
 
 </script>
 
