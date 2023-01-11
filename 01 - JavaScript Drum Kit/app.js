@@ -39,8 +39,9 @@ function logKeys(e){
   // TODO
   // transition end part
   function removeTransition(e){
+    // when it receives the transform property event remove the playing class
       if (e.propertyName  !== 'transform') return;
-      // when it receives the transform property event remove the playing class
+
       // this is referring the the individual key that will be pressed
       this.classList.remove('playing')
   }
@@ -54,7 +55,7 @@ function logKeys(e){
         key.classList.add('playing')
 
   }
-
+// when there is a transitionend event remove the playing class
   const keys = document.querySelectorAll('.key')
   keys.forEach(key => key.addEventListener('transitionend', removeTransition))
 // document.body.addEventListener('keypress', logKeys)
